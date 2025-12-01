@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "TravelBooking.Core/1.0.0": {
+        "runtime": {
+          "TravelBooking.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TravelBooking.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

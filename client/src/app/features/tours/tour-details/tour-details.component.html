@@ -1,0 +1,57 @@
+<div class="details-container" *ngIf="tour">
+    <div class="tour-header">
+        <h1>{{ tour.name }}</h1>
+        <p class="location">{{ tour.location }}</p>
+    </div>
+
+    <div class="tour-content">
+        <img [src]="tour.imageUrl || 'assets/placeholder.jpg'" alt="{{ tour.name }}" class="tour-image">
+
+        <div class="tour-info">
+            <p class="description">{{ tour.description }}</p>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <strong>Price:</strong> {{ tour.price | currency }}
+                </div>
+                <div class="detail-item">
+                    <strong>Dates:</strong> {{ tour.startDate | date }} - {{ tour.endDate | date }}
+                    <div class="details-container" *ngIf="tour">
+                        <div class="tour-header">
+                            <h1>{{ tour.name }}</h1>
+                            <p class="location">{{ tour.location }}</p>
+                        </div>
+
+                        <div class="tour-content">
+                            <img [src]="tour.imageUrl || 'assets/placeholder.jpg'" alt="{{ tour.name }}"
+                                class="tour-image">
+
+                            <div class="tour-info">
+                                <p class="description">{{ tour.description }}</p>
+
+                                <div class="details-grid">
+                                    <div class="detail-item">
+                                        <strong>Price:</strong> {{ tour.price | currency }}
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Dates:</strong> {{ tour.startDate | date }} - {{ tour.endDate | date }}
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Available Slots:</strong> {{ tour.availableSlots }}
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-success" *ngIf="bookingSuccess">{{ bookingSuccess }}</div>
+                                <div class="alert alert-danger" *ngIf="bookingError">{{ bookingError }}</div>
+
+                                <button *ngIf="tour.availableSlots > 0" (click)="bookTour()"
+                                    class="btn btn-primary btn-lg">
+                                    {{ isLoggedIn ? 'Book Now' : 'Login to Book' }}
+                                </button>
+                                <button *ngIf="tour.availableSlots <= 0" disabled class="btn btn-secondary btn-lg">Sold
+                                    Out</button>
+                            </div>
+                        </div>
+
+                        <a routerLink="/tours" class="back-link">Back to Tours</a>
+                    </div>

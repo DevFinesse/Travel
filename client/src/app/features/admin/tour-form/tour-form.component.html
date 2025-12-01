@@ -1,0 +1,40 @@
+<div class="admin-container">
+    <h2>{{ isEditMode ? 'Edit Tour' : 'Create New Tour' }}</h2>
+    <form [formGroup]="tourForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" formControlName="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" formControlName="description" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" formControlName="location" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" id="price" formControlName="price" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="imageUrl">Image URL</label>
+            <input type="text" id="imageUrl" formControlName="imageUrl" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" formControlName="startDate" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" formControlName="endDate" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="availableSlots">Available Slots</label>
+            <input type="number" id="availableSlots" formControlName="availableSlots" class="form-control">
+        </div>
+        <button type="submit" [disabled]="!tourForm.valid" class="btn btn-primary">{{ isEditMode ? 'Update' : 'Create'
+            }}</button>
+        <a routerLink="/admin/tours" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

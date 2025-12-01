@@ -1,0 +1,27 @@
+<div class="admin-container">
+    <h2>Manage Tours</h2>
+    <a routerLink="/admin/tours/new" class="btn btn-primary">Create New Tour</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th>Dates</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tour of tours">
+                <td>{{ tour.name }}</td>
+                <td>{{ tour.location }}</td>
+                <td>{{ tour.price | currency }}</td>
+                <td>{{ tour.startDate | date }} - {{ tour.endDate | date }}</td>
+                <td>
+                    <a [routerLink]="['/admin/tours/edit', tour.id]" class="btn btn-sm btn-info">Edit</a>
+                    <button (click)="deleteTour(tour.id)" class="btn btn-sm btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

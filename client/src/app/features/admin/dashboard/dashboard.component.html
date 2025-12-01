@@ -1,0 +1,36 @@
+<div class="dashboard-container">
+    <h2>Admin Dashboard</h2>
+
+    <div class="stats-grid" *ngIf="analytics">
+        <div class="stat-card">
+            <h3>Total Bookings</h3>
+            <p class="stat-value">{{ analytics.totalBookings }}</p>
+        </div>
+        <div class="stat-card">
+            <h3>Total Revenue</h3>
+            <p class="stat-value">{{ analytics.totalRevenue | currency }}</p>
+        </div>
+        <div class="stat-card">
+            <h3>Total Tours</h3>
+            <p class="stat-value">{{ analytics.totalTours }}</p>
+        </div>
+    </div>
+
+    <div class="chart-container" *ngIf="analytics && analytics.bookingsPerMonth.length > 0">
+        <h3>Bookings per Month</h3>
+        <div class="bar-chart">
+            <div class="bar-group" *ngFor="let item of analytics.bookingsPerMonth">
+                <div class="bar" [style.height]="getBarHeight(item.count)" [title]="item.count + ' bookings'"></div>
+                <div class="label">{{ item.month }}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-links">
+        <a routerLink="/admin/tours" class="dashboard-card">
+            <h3>Manage Tours</h3>
+            <p>Create, edit, and delete tour packages.</p>
+        </a>
+        <!-- Add more admin links here if needed -->
+    </div>
+</div>

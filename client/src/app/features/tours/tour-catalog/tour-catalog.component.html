@@ -1,0 +1,21 @@
+<div class="catalog-container">
+    <div class="search-bar">
+        <input type="text" [(ngModel)]="location" placeholder="Location">
+        <input type="number" [(ngModel)]="minPrice" placeholder="Min Price">
+        <input type="number" [(ngModel)]="maxPrice" placeholder="Max Price">
+        <input type="date" [(ngModel)]="startDate">
+        <button (click)="onSearch()">Search</button>
+    </div>
+
+    <div class="tour-grid">
+        <div *ngFor="let tour of tours" class="tour-card">
+            <img [src]="tour.imageUrl || 'assets/placeholder.jpg'" alt="{{ tour.name }}">
+            <div class="tour-info">
+                <h3>{{ tour.name }}</h3>
+                <p>{{ tour.location }}</p>
+                <p class="price">{{ tour.price | currency }}</p>
+                <a [routerLink]="['/tours', tour.id]" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>

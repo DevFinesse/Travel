@@ -1,0 +1,24 @@
+<div class="bookings-container">
+    <h2>My Bookings</h2>
+
+    <div *ngIf="bookings.length === 0" class="no-bookings">
+        <p>You haven't booked any tours yet.</p>
+        <a routerLink="/tours" class="btn btn-primary">Browse Tours</a>
+    </div>
+
+    <div class="booking-list" *ngIf="bookings.length > 0">
+        <div *ngFor="let booking of bookings" class="booking-card">
+            <div class="booking-header">
+                <h3>{{ booking.tourName }}</h3>
+                <span class="status" [ngClass]="booking.status.toLowerCase()">{{ booking.status }}</span>
+            </div>
+            <div class="booking-details">
+                <p><strong>Date:</strong> {{ booking.bookingDate | date }}</p>
+                <p><strong>Booking ID:</strong> #{{ booking.id }}</p>
+            </div>
+            <div class="booking-actions" *ngIf="booking.status !== 'Cancelled'">
+                <button (click)="cancelBooking(booking.id)" class="btn btn-danger">Cancel Booking</button>
+            </div>
+        </div>
+    </div>
+</div>
