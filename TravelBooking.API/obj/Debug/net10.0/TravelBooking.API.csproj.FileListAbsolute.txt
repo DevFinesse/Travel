@@ -217,4 +217,4 @@ C:\Users\BABATUNDE\Desktop\Travel\TravelBooking.API\obj\Debug\net10.0\TravelBook
 C:\Users\BABATUNDE\Desktop\Travel\TravelBooking.API\obj\Debug\net10.0\TravelBooking.API.genruntimeconfig.cache
 C:\Users\BABATUNDE\Desktop\Travel\TravelBooking.API\obj\Debug\net10.0\ref\TravelBooking.API.dll
 C:\Users\BABATUNDE\Desktop\Travel\TravelBooking.API\bin\Debug\net10.0\BCrypt.Net-Next.dll
-C:\Users\BABATUNDE\Desktop\Travel\TravelBooking.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\BABATUNDE\Desktop\Travel\travelbooking.api\obj\Debug\net10.0\TravelBooking.API.sourcelink.json

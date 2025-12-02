@@ -55,4 +55,21 @@ export class AuthService {
   isAuthenticated(): boolean {
     return !!this.getToken();
   }
+
+  getCurrentUser(): any {
+    return this.currentUserSubject.value;
+  }
+
+  hasRole(role: string): boolean {
+    const user = this.getCurrentUser();
+    return user?.role === role;
+  }
+
+  isAdmin(): boolean {
+    return this.hasRole('Admin');
+  }
+
+  isCustomer(): boolean {
+    return this.hasRole('Customer');
+  }
 }

@@ -42,3 +42,21 @@
     color: white;
     border: none;
 }
+
+.btn-star {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    color: #ccc;
+}
+
+.btn-star:hover {
+    transform: scale(1.2);
+}
+
+.btn-star.featured {
+    filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6));
+}

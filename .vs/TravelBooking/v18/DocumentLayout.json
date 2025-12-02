@@ -7,8 +7,36 @@
       "RelativeMoniker": "D:0:0:{32649A7D-0E5B-40C2-8EA9-7CF34473752B}|TravelBooking.API\\TravelBooking.API.csproj|solutionrelative:travelbooking.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{16D5B80E-E463-492E-989F-500658DA3953}|TravelBooking.Infrastructure\\TravelBooking.Infrastructure.csproj|c:\\users\\babatunde\\desktop\\travel\\travelbooking.infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16D5B80E-E463-492E-989F-500658DA3953}|TravelBooking.Infrastructure\\TravelBooking.Infrastructure.csproj|solutionrelative:travelbooking.infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530C4319-D19B-4AEC-B016-51388CCC28C2}|TravelBooking.Core\\TravelBooking.Core.csproj|c:\\users\\babatunde\\desktop\\travel\\travelbooking.core\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530C4319-D19B-4AEC-B016-51388CCC28C2}|TravelBooking.Core\\TravelBooking.Core.csproj|solutionrelative:travelbooking.core\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530C4319-D19B-4AEC-B016-51388CCC28C2}|TravelBooking.Core\\TravelBooking.Core.csproj|c:\\users\\babatunde\\desktop\\travel\\travelbooking.core\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530C4319-D19B-4AEC-B016-51388CCC28C2}|TravelBooking.Core\\TravelBooking.Core.csproj|solutionrelative:travelbooking.core\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530C4319-D19B-4AEC-B016-51388CCC28C2}|TravelBooking.Core\\TravelBooking.Core.csproj|c:\\users\\babatunde\\desktop\\travel\\travelbooking.core\\dtos\\bookingdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530C4319-D19B-4AEC-B016-51388CCC28C2}|TravelBooking.Core\\TravelBooking.Core.csproj|solutionrelative:travelbooking.core\\dtos\\bookingdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16D5B80E-E463-492E-989F-500658DA3953}|TravelBooking.Infrastructure\\TravelBooking.Infrastructure.csproj|c:\\users\\babatunde\\desktop\\travel\\travelbooking.infrastructure\\data\\travelbookingdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16D5B80E-E463-492E-989F-500658DA3953}|TravelBooking.Infrastructure\\TravelBooking.Infrastructure.csproj|solutionrelative:travelbooking.infrastructure\\data\\travelbookingdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{16D5B80E-E463-492E-989F-500658DA3953}|TravelBooking.Infrastructure\\TravelBooking.Infrastructure.csproj|c:\\users\\babatunde\\desktop\\travel\\travelbooking.infrastructure\\data\\travelbookingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16D5B80E-E463-492E-989F-500658DA3953}|TravelBooking.Infrastructure\\TravelBooking.Infrastructure.csproj|solutionrelative:travelbooking.infrastructure\\data\\travelbookingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530C4319-D19B-4AEC-B016-51388CCC28C2}|TravelBooking.Core\\TravelBooking.Core.csproj|c:\\users\\babatunde\\desktop\\travel\\travelbooking.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530C4319-D19B-4AEC-B016-51388CCC28C2}|TravelBooking.Core\\TravelBooking.Core.csproj|solutionrelative:travelbooking.core\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530C4319-D19B-4AEC-B016-51388CCC28C2}|TravelBooking.Core\\TravelBooking.Core.csproj|c:\\users\\babatunde\\desktop\\travel\\travelbooking.core\\dtos\\analyticsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530C4319-D19B-4AEC-B016-51388CCC28C2}|TravelBooking.Core\\TravelBooking.Core.csproj|solutionrelative:travelbooking.core\\dtos\\analyticsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,14 +67,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TravelBookingDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Infrastructure\\Data\\TravelBookingDbContext.cs",
-              "RelativeDocumentMoniker": "TravelBooking.Infrastructure\\Data\\TravelBookingDbContext.cs",
-              "ToolTip": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Infrastructure\\Data\\TravelBookingDbContext.cs",
-              "RelativeToolTip": "TravelBooking.Infrastructure\\Data\\TravelBookingDbContext.cs",
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Infrastructure\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "TravelBooking.Infrastructure\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Infrastructure\\Services\\AuthService.cs",
+              "RelativeToolTip": "TravelBooking.Infrastructure\\Services\\AuthService.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T21:02:35.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "TravelBooking.Core\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "TravelBooking.Core\\Interfaces\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T07:21:24.238Z",
+              "WhenOpened": "2025-12-01T21:02:30.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookingDtos.cs",
+              "DocumentMoniker": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\DTOs\\BookingDtos.cs",
+              "RelativeDocumentMoniker": "TravelBooking.Core\\DTOs\\BookingDtos.cs",
+              "ToolTip": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\DTOs\\BookingDtos.cs",
+              "RelativeToolTip": "TravelBooking.Core\\DTOs\\BookingDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T21:02:15.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\Entities\\Booking.cs",
+              "RelativeDocumentMoniker": "TravelBooking.Core\\Entities\\Booking.cs",
+              "ToolTip": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\Entities\\Booking.cs",
+              "RelativeToolTip": "TravelBooking.Core\\Entities\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T21:02:12.726Z",
               "EditorCaption": ""
             },
             {
@@ -60,6 +127,58 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-11-28T06:11:08.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TravelBookingDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Infrastructure\\Data\\TravelBookingDbContextFactory.cs",
+              "RelativeDocumentMoniker": "TravelBooking.Infrastructure\\Data\\TravelBookingDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Infrastructure\\Data\\TravelBookingDbContextFactory.cs",
+              "RelativeToolTip": "TravelBooking.Infrastructure\\Data\\TravelBookingDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T21:01:50.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "TravelBooking.Core\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\Entities\\User.cs",
+              "RelativeToolTip": "TravelBooking.Core\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T21:01:27.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AnalyticsDto.cs",
+              "DocumentMoniker": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\DTOs\\AnalyticsDto.cs",
+              "RelativeDocumentMoniker": "TravelBooking.Core\\DTOs\\AnalyticsDto.cs",
+              "ToolTip": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\DTOs\\AnalyticsDto.cs",
+              "RelativeToolTip": "TravelBooking.Core\\DTOs\\AnalyticsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T21:01:13.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TravelBookingDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Infrastructure\\Data\\TravelBookingDbContext.cs",
+              "RelativeDocumentMoniker": "TravelBooking.Infrastructure\\Data\\TravelBookingDbContext.cs",
+              "ToolTip": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Infrastructure\\Data\\TravelBookingDbContext.cs",
+              "RelativeToolTip": "TravelBooking.Infrastructure\\Data\\TravelBookingDbContext.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T07:21:24.238Z",
               "EditorCaption": ""
             }
           ]

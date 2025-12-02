@@ -36,4 +36,13 @@ export class TourListComponent implements OnInit {
             });
         }
     }
+
+    toggleFeatured(tour: Tour) {
+        this.tourService.toggleFeatured(tour.id).subscribe({
+            next: () => {
+                tour.isFeatured = !tour.isFeatured;
+            },
+            error: (err) => console.error('Error toggling featured status', err)
+        });
+    }
 }

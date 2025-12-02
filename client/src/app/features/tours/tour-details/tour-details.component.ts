@@ -15,6 +15,7 @@ import { AuthService } from '../../../core/services/auth.service';
 export class TourDetailsComponent implements OnInit {
     tour: Tour | null = null;
     isLoggedIn = false;
+    isAdmin = false;
     bookingError: string = '';
     bookingSuccess: string = '';
 
@@ -28,6 +29,7 @@ export class TourDetailsComponent implements OnInit {
 
     ngOnInit(): void {
         this.isLoggedIn = this.authService.isAuthenticated();
+        this.isAdmin = this.authService.isAdmin();
         this.route.params.subscribe(params => {
             const id = +params['id'];
             if (id) {

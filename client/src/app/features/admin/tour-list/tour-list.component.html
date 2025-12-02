@@ -4,6 +4,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Featured</th>
                 <th>Name</th>
                 <th>Location</th>
                 <th>Price</th>
@@ -13,6 +14,12 @@
         </thead>
         <tbody>
             <tr *ngFor="let tour of tours">
+                <td>
+                    <button (click)="toggleFeatured(tour)" class="btn-star" [class.featured]="tour.isFeatured"
+                        title="{{ tour.isFeatured ? 'Remove from featured' : 'Mark as featured' }}">
+                        {{ tour.isFeatured ? '⭐' : '☆' }}
+                    </button>
+                </td>
                 <td>{{ tour.name }}</td>
                 <td>{{ tour.location }}</td>
                 <td>{{ tour.price | currency }}</td>

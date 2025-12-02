@@ -120,7 +120,7 @@ namespace TravelBooking.Infrastructure.Services
                 .ToListAsync();
         }
 
-        public async Task CancelBookingAsync(int bookingId, int userId)
+        public async Task CancelBookingAsync(int bookingId, int userId, bool isAdmin = false)
         {
             var booking = await _context.Bookings
                 .Include(b => b.Tour)
@@ -131,20 +131,10 @@ namespace TravelBooking.Infrastructure.Services
                 throw new Exception("Booking not found");
             }
 
-            // Allow admin to cancel any booking, or user to cancel their own
-            // For now, assuming userId passed is the requester. 
-            // If admin calls this, we might need a different check or bypass.
-            // But let's assume this method is for user cancellation for now.
-            // If admin, we might need another method or role check here.
-            
-            // Simple check: if userId is not the owner, check if it's an admin (logic handled in controller usually, but here for safety)
-            // For simplicity, let's assume the controller validates permissions.
-            
-            if (booking.UserId != userId) 
+            // Check if user is authorized to cancel (owner or admin)
+            if (!isAdmin && booking.UserId != userId) 
             {
-                 // If we want to allow admin, we'd need to pass IsAdmin flag or similar.
-                 // For now, strict user check.
-                 // throw new Exception("Unauthorized");
+                 throw new Exception("Unauthorized");
             }
 
             if (booking.Status == "Cancelled")

@@ -9,3 +9,4 @@ C:\Users\BABATUNDE\Desktop\Travel\TravelBooking.Core\obj\Debug\net10.0\TravelBoo
 C:\Users\BABATUNDE\Desktop\Travel\TravelBooking.Core\obj\Debug\net10.0\refint\TravelBooking.Core.dll
 C:\Users\BABATUNDE\Desktop\Travel\TravelBooking.Core\obj\Debug\net10.0\TravelBooking.Core.pdb
 C:\Users\BABATUNDE\Desktop\Travel\TravelBooking.Core\obj\Debug\net10.0\ref\TravelBooking.Core.dll
+C:\Users\BABATUNDE\Desktop\Travel\TravelBooking.Core\obj\Debug\net10.0\TravelBooking.Core.sourcelink.json

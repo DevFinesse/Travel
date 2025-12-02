@@ -10,5 +10,7 @@ namespace TravelBooking.Core.Interfaces
         Task UpdateTourAsync(int id, CreateTourDto createTourDto);
         Task DeleteTourAsync(int id);
         Task<IEnumerable<TourDto>> SearchToursAsync(string? location, decimal? minPrice, decimal? maxPrice, DateTime? startDate);
+        Task<IEnumerable<TourDto>> GetFeaturedToursAsync();
+        Task ToggleFeaturedAsync(int id);
     }
 }

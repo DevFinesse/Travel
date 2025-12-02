@@ -66,5 +66,26 @@ namespace TravelBooking.API.Controllers
         {
             return Ok(await _tourService.SearchToursAsync(location, minPrice, maxPrice, startDate));
         }
+
+        [HttpGet("featured")]
+        public async Task<ActionResult<IEnumerable<TourDto>>> GetFeatured()
+        {
+            return Ok(await _tourService.GetFeaturedToursAsync());
+        }
+
+        [HttpPut("{id}/toggle-featured")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ToggleFeatured(int id)
+        {
+            try
+            {
+                await _tourService.ToggleFeaturedAsync(id);
+                return NoContent();
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+        }
     }
 }

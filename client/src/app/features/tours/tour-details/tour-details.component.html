@@ -44,7 +44,7 @@
                                 <div class="alert alert-success" *ngIf="bookingSuccess">{{ bookingSuccess }}</div>
                                 <div class="alert alert-danger" *ngIf="bookingError">{{ bookingError }}</div>
 
-                                <button *ngIf="tour.availableSlots > 0" (click)="bookTour()"
+                                <button *ngIf="tour.availableSlots > 0 && !isAdmin" (click)="bookTour()"
                                     class="btn btn-primary btn-lg">
                                     {{ isLoggedIn ? 'Book Now' : 'Login to Book' }}
                                 </button>

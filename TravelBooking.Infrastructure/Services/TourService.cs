@@ -28,7 +28,8 @@ namespace TravelBooking.Infrastructure.Services
                     ImageUrl = t.ImageUrl,
                     StartDate = t.StartDate,
                     EndDate = t.EndDate,
-                    AvailableSlots = t.AvailableSlots
+                    AvailableSlots = t.AvailableSlots,
+                    IsFeatured = t.IsFeatured
                 })
                 .ToListAsync();
         }
@@ -48,7 +49,8 @@ namespace TravelBooking.Infrastructure.Services
                 ImageUrl = t.ImageUrl,
                 StartDate = t.StartDate,
                 EndDate = t.EndDate,
-                AvailableSlots = t.AvailableSlots
+                AvailableSlots = t.AvailableSlots,
+                IsFeatured = t.IsFeatured
             };
         }
 
@@ -63,7 +65,8 @@ namespace TravelBooking.Infrastructure.Services
                 ImageUrl = createTourDto.ImageUrl,
                 StartDate = createTourDto.StartDate,
                 EndDate = createTourDto.EndDate,
-                AvailableSlots = createTourDto.AvailableSlots
+                AvailableSlots = createTourDto.AvailableSlots,
+                IsFeatured = createTourDto.IsFeatured
             };
 
             _context.Tours.Add(tour);
@@ -79,7 +82,8 @@ namespace TravelBooking.Infrastructure.Services
                 ImageUrl = tour.ImageUrl,
                 StartDate = tour.StartDate,
                 EndDate = tour.EndDate,
-                AvailableSlots = tour.AvailableSlots
+                AvailableSlots = tour.AvailableSlots,
+                IsFeatured = tour.IsFeatured
             };
         }
 
@@ -96,6 +100,7 @@ namespace TravelBooking.Infrastructure.Services
             tour.StartDate = createTourDto.StartDate;
             tour.EndDate = createTourDto.EndDate;
             tour.AvailableSlots = createTourDto.AvailableSlots;
+            tour.IsFeatured = createTourDto.IsFeatured;
 
             await _context.SaveChangesAsync();
         }
@@ -145,9 +150,41 @@ namespace TravelBooking.Infrastructure.Services
                     ImageUrl = t.ImageUrl,
                     StartDate = t.StartDate,
                     EndDate = t.EndDate,
-                    AvailableSlots = t.AvailableSlots
+                    AvailableSlots = t.AvailableSlots,
+                    IsFeatured = t.IsFeatured
                 })
                 .ToListAsync();
+        }
+
+        public async Task<IEnumerable<TourDto>> GetFeaturedToursAsync()
+        {
+            return await _context.Tours
+                .Where(t => t.IsFeatured)
+                .OrderBy(t => t.StartDate)
+                .Take(6)
+                .Select(t => new TourDto
+                {
+                    Id = t.Id,
+                    Name = t.Name,
+                    Description = t.Description,
+                    Location = t.Location,
+                    Price = t.Price,
+                    ImageUrl = t.ImageUrl,
+                    StartDate = t.StartDate,
+                    EndDate = t.EndDate,
+                    AvailableSlots = t.AvailableSlots,
+                    IsFeatured = t.IsFeatured
+                })
+                .ToListAsync();
+        }
+
+        public async Task ToggleFeaturedAsync(int id)
+        {
+            var tour = await _context.Tours.FindAsync(id);
+            if (tour == null) throw new Exception("Tour not found");
+
+            tour.IsFeatured = !tour.IsFeatured;
+            await _context.SaveChangesAsync();
         }
     }
 }

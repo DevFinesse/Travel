@@ -17,7 +17,7 @@ namespace TravelBooking.Infrastructure.Services
 
         public async Task<AnalyticsDto> GetAnalyticsAsync()
         {
-            var totalBookings = await _context.Bookings.CountAsync();
+            var totalBookings = await _context.Bookings.CountAsync(b => b.Status != "Cancelled");
             var totalTours = await _context.Tours.CountAsync();
             
             // Calculate revenue from confirmed bookings
@@ -29,7 +29,7 @@ namespace TravelBooking.Infrastructure.Services
             // Group bookings by month for the last 12 months
             var lastYear = DateTime.UtcNow.AddYears(-1);
             var bookingsPerMonth = await _context.Bookings
-                .Where(b => b.BookingDate >= lastYear)
+                .Where(b => b.BookingDate >= lastYear && b.Status != "Cancelled")
                 .GroupBy(b => new { b.BookingDate.Year, b.BookingDate.Month })
                 .Select(g => new
                 {

@@ -3904,11 +3904,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.API\\TravelBooking.API.csproj",
+      "projectUniqueName": "C:\\Users\\BABATUNDE\\desktop\\travel\\travelbooking.api\\TravelBooking.API.csproj",
       "projectName": "TravelBooking.API",
-      "projectPath": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.API\\TravelBooking.API.csproj",
+      "projectPath": "C:\\Users\\BABATUNDE\\desktop\\travel\\travelbooking.api\\TravelBooking.API.csproj",
       "packagesPath": "C:\\Users\\BABATUNDE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.API\\obj\\",
+      "outputPath": "C:\\Users\\BABATUNDE\\desktop\\travel\\travelbooking.api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3933,8 +3933,8 @@
             "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\TravelBooking.Core.csproj": {
               "projectPath": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Core\\TravelBooking.Core.csproj"
             },
-            "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Infrastructure\\TravelBooking.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\BABATUNDE\\Desktop\\Travel\\TravelBooking.Infrastructure\\TravelBooking.Infrastructure.csproj"
+            "C:\\Users\\BABATUNDE\\desktop\\travel\\TravelBooking.Infrastructure\\TravelBooking.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\BABATUNDE\\desktop\\travel\\TravelBooking.Infrastructure\\TravelBooking.Infrastructure.csproj"
             }
           }
         }

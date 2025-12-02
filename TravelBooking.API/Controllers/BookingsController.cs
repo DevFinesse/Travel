@@ -23,6 +23,11 @@ namespace TravelBooking.API.Controllers
         {
             try
             {
+                if (User.IsInRole("Admin"))
+                {
+                    return Forbid("Admins cannot make bookings.");
+                }
+
                 var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value!);
                 var booking = await _bookingService.CreateBookingAsync(userId, createBookingDto);
                 return CreatedAtAction(nameof(GetUserBookings), new { }, booking);
@@ -53,9 +58,8 @@ namespace TravelBooking.API.Controllers
             try
             {
                 var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value!);
-                // Note: In a real app, we'd check if the user is admin to allow cancelling others' bookings.
-                // For now, passing userId to service to verify ownership.
-                await _bookingService.CancelBookingAsync(id, userId);
+                var isAdmin = User.IsInRole("Admin");
+                await _bookingService.CancelBookingAsync(id, userId, isAdmin);
                 return NoContent();
             }
             catch (Exception ex)

@@ -5,8 +5,39 @@
         <a routerLink="/tours" class="btn btn-primary">Explore Tours</a>
     </div>
 
-    <div class="featured-tours">
+    <div class="featured-section">
         <h2>Featured Tours</h2>
-        <!-- Featured tours list would go here -->
+        @if (featuredTours.length > 0) {
+        <div class="tours-grid">
+            @for (tour of featuredTours; track tour.id) {
+            <div class="tour-card">
+                <div class="tour-image">
+                    <img [src]="tour.imageUrl || 'https://via.placeholder.com/400x250?text=Tour+Image'"
+                        [alt]="tour.name">
+                    <div class="tour-badge">Featured</div>
+                </div>
+                <div class="tour-content">
+                    <h3>{{ tour.name }}</h3>
+                    <p class="tour-location">
+                        <span class="location-icon">📍</span>
+                        {{ tour.location }}
+                    </p>
+                    <p class="tour-description">{{ tour.description }}</p>
+                    <div class="tour-footer">
+                        <div class="tour-price">
+                            <span class="price-label">From</span>
+                            <span class="price-amount">{{ tour.price | currency }}</span>
+                        </div>
+                        <a [routerLink]="['/tours', tour.id]" class="btn-view-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+        } @else {
+        <p class="no-tours">No featured tours available at the moment. Check back soon!</p>
+        }
     </div>
 </div>

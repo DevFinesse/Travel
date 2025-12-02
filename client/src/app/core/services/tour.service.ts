@@ -13,6 +13,7 @@ export interface Tour {
     startDate: string;
     endDate: string;
     availableSlots: number;
+    isFeatured: boolean;
 }
 
 export interface CreateTourDto {
@@ -24,6 +25,7 @@ export interface CreateTourDto {
     startDate: string;
     endDate: string;
     availableSlots: number;
+    isFeatured: boolean;
 }
 
 @Injectable({
@@ -62,5 +64,13 @@ export class TourService {
         if (startDate) params = params.set('startDate', startDate);
 
         return this.http.get<Tour[]>(`${this.apiUrl}/search`, { params });
+    }
+
+    getFeaturedTours(): Observable<Tour[]> {
+        return this.http.get<Tour[]>(`${this.apiUrl}/featured`);
+    }
+
+    toggleFeatured(id: number): Observable<void> {
+        return this.http.put<void>(`${this.apiUrl}/${id}/toggle-featured`, {});
     }
 }
